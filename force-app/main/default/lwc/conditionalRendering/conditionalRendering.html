@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+            Conditional Rendering example
+        </h3>
+        <div class="slds-p-around_small"> <p class="slds-p-horizontal_small">Hello !!</p> </div>
+        
+        <div class="slds-p-around_small">   
+        <lightning-input type="checkbox" label="Click Me" name="inputchkbox1" onchange={handleCheckboxChange}></lightning-input>
+        </div>
+            <template if:true={isVisible}>
+                <p class="slds-p-horizontal_small">You have checked the checkbox!</p>
+            </template>
+            <template if:false={isVisible}>
+                <p class="slds-p-horizontal_small">You have unchecked the checkbox!</p>
+            </template>
+
+    </lightning-card>
+
+</template>
