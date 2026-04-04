@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Parent Component Using API">
+        <div class="slds-var-around_medium">
+            <p>Enter a value between 0 and 100:</p>
+            <lightning-input type="number" value={inputValue} onchange={handleInputChange}></lightning-input>
+            <br />
+            <c-child-using-a-p-i parent-value={inputValue}></c-child-using-a-p-i>
+        </div>
+    </lightning-card>
+</template>
